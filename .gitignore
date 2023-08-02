@@ -106,7 +106,7 @@ venv.bak/
 .mypy_cache/
 
 # custom
-mmpose/.mim
+mmpose/mmpose/.mim
 /models
 /data
 .vscode
@@ -129,8 +129,6 @@ docs/**/modelzoo.md
 
 # Pytorch
 *.pth
-*.MP4
-*.mp4
 *.jpg
 *.pdf
 *.out
@@ -138,3 +136,7 @@ docs/**/modelzoo.md
 
 *.DS_Store
 slurm*
+srun*
+data
+vis_stats*
+vis_annots*

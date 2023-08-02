@@ -1,0 +1,7 @@
+_base_ = ['slowonly_kinetics400-pretrained-r50_8xb16-4x16x1-20e_chimp-rgb.py']
+
+model = dict(
+    roi_head=dict(
+        bbox_roi_extractor=dict(with_global=True),
+        bbox_head=dict(in_channels=4096)))
+   
