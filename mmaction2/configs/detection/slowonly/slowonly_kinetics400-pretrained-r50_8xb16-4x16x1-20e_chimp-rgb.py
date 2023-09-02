@@ -142,6 +142,6 @@ param_scheduler = [
 ]
 
 optim_wrapper = dict(
-    optimizer=dict(type='SGD', lr=0.2, momentum=0.9, weight_decay=0.00001),
+    optimizer=dict(type='SGD', lr=0.001, momentum=0.9, weight_decay=0.00001),
     clip_grad=dict(max_norm=40, norm_type=2))
 

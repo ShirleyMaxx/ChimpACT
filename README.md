@@ -107,6 +107,8 @@ pip install -v -e .
 # "-e" means installing a project in editable mode,
 # thus any local modifications made to the code will take effect without reinstallation.
 pip install tensorboard pycocotools seaborn tqdm ipdb imageio openpyxl
+pip uninstall -y Pillow
+pip install Pillow==9.5.0
 cd ..
 ```
 

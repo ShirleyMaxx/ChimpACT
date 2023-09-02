@@ -49,8 +49,8 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 
 # some hyper parameters
-total_epochs = 5
-num_last_epochs = 5
+total_epochs = 10
+num_last_epochs = 10
 resume_from = None
 interval = 5
 

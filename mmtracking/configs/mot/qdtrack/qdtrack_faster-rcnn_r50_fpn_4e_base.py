@@ -77,6 +77,6 @@ optimizer_config = dict(
     _delete_=True, grad_clip=dict(max_norm=35, norm_type=2))
 lr_config = dict(policy='step', step=[3])
 # runtime settings
-total_epochs = 5
+total_epochs = 10
 evaluation = dict(metric=['bbox', 'track'], interval=1)
 # evaluation = dict(metric=['bbox'], interval=1)

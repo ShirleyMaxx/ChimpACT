@@ -115,9 +115,8 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 
 # some hyper parameters
-total_epochs = 5
-num_last_epochs = 5
-# resume_from = 'work_dirs/bytetrack_yolox_x_chimp/epoch_23.pth'
+total_epochs = 10
+num_last_epochs = 10
 interval = 5
 
 # learning policy

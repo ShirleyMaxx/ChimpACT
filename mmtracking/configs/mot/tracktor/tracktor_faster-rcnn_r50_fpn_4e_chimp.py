@@ -70,6 +70,6 @@ lr_config = dict(
     warmup_ratio=1.0 / 100,
     step=[3])
 # runtime settings
-total_epochs = 5
+total_epochs = 10
 evaluation = dict(metric=['bbox', 'track'], interval=1)
 search_metrics = ['MOTA', 'IDF1', 'FN', 'FP', 'IDs', 'MT', 'ML']

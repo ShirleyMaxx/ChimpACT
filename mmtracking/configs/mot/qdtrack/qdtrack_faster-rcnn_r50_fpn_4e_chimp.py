@@ -64,4 +64,4 @@ optimizer = dict(
     paramwise_cfg=dict(norm_decay_mult=0.0, bias_decay_mult=0.0))
 optimizer_config = dict(grad_clip=None)
 
-total_epochs = 5
+total_epochs = 10

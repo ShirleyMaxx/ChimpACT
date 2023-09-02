@@ -48,7 +48,7 @@ optimizer = dict(
 optimizer_config = dict(grad_clip=None)
 
 # some hyper parameters
-total_epochs = 5
+total_epochs = 10
 interval = 5
 
 # learning policy
