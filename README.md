@@ -36,7 +36,7 @@ This is the offical [Pytorch](https://pytorch.org/) implementation of our paper:
 <h4 align="center">
   <a href="https://shirleymaxx.github.io/ChimpACT/", target="_blank">[project page]</a> /
   <a href="https://drive.google.com/file/d/1QUKYqhB8019y5zn0C2swtmTixrP7prMM/view?usp=sharing", target="_blank">[dataset example]</a> /
-  <a href="https://www.youtube.com/watch?v=KGwDLg8Mn7I", target="_blank">[video]</a>
+  <a href="https://vimeo.com/876025855", target="_blank">[video]</a>
   <!-- <a href="", target="_blank">[arXiv]</a> /
   <a href="", target="_blank">[paper]</a> /
   <a href="", target="_blank">[supplementary]</a> -->
