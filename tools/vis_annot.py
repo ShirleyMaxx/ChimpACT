@@ -155,6 +155,7 @@ def parse_opt():
     parser.add_argument('--vis-action', action='store_true', help='visualize action labels')
     parser.add_argument('--vis-tracking', action='store_true', help='visualize tracking labels')
     parser.add_argument('--vis-pose', action='store_true', help='visualize pose labels')
+    parser.add_argument('--save-img', action='store_true', help='save images')
 
     opt = parser.parse_args()
     return opt
@@ -239,7 +240,8 @@ def run(opt):
 
     save_dir = Path(opt.output)  # save path for visualization
     os.makedirs(save_dir, exist_ok=True)  # make dir
-    os.makedirs(osp.join(save_dir, 'imgs'), exist_ok=True)  # make dir
+    if opt.save_img:
+        os.makedirs(osp.join(save_dir, 'imgs'), exist_ok=True)  # make dir
 
     vis_action = opt.vis_action
     vis_tracking = opt.vis_tracking
@@ -252,8 +254,9 @@ def run(opt):
         for vid_id in tqdm(vid_ids):
             cat_ids = annot_file.get_cat_ids()
             img_ids = annot_file.get_img_ids_from_vid(vid_id)
+            vid_name = annot_file.load_vids([vid_id])[0]['name'][:-4]
         
-            vis_path = osp.join(opt.output, f'{vid_id:06d}_annotated.mp4')
+            vis_path = osp.join(opt.output, f'{vid_name}_annotated.mp4')
             videowriter = imageio.get_writer(vis_path, fps=25)
             for img_id in tqdm(img_ids):
                 img_info = annot_file.load_imgs([img_id])[0]
@@ -269,7 +272,7 @@ def run(opt):
                 ann_ids = annot_file.get_ann_ids(img_ids=[img_id], cat_ids=cat_ids)
                 objs = annot_file.load_anns(ann_ids)
                 ori_img, img, flg = show_annots(img, objs, frame_idx, draw_tracking=vis_tracking, draw_action=vis_action, draw_pose=vis_pose)
-                if not img_name_idx % interval:
+                if opt.save_img and not img_name_idx % interval:
                     save_img_path = osp.join(save_dir, 'imgs', f'gt_{vid_name}_{img_name_idx}.png')
                     cv2.imwrite(save_img_path, img[...,::-1])
                 if flg == -2:

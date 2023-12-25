@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1 align="center">ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors <br> (submitted to NeurIPS 2023 D&B Track)</h1>
+  <h1 align="center">ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors <br> (NeurIPS 2023)</h1>
   
 </div>
 
@@ -12,7 +12,7 @@
 # Introduction
 
 This is the offical [Pytorch](https://pytorch.org/) implementation of our paper:
-<h3 align="center">ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors <br> (submitted to NeurIPS 2023 D&B Track)</h3>
+<h3 align="center">ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors <br> (NeurIPS 2023)</h3>
 
 <h4 align="center" style="text-decoration: none;">
   <a href="https://shirleymaxx.github.io/", target="_blank">Xiaoxuan Ma</a><sup>*</sup>
@@ -34,12 +34,10 @@ This is the offical [Pytorch](https://pytorch.org/) implementation of our paper:
   <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm", target="_blank">Yizhou Wang</a>
 </h4>
 <h4 align="center">
+  <a href="https://arxiv.org/pdf/2310.16447.pdf", target="_blank">[paper]</a> /
   <a href="https://shirleymaxx.github.io/ChimpACT/", target="_blank">[project page]</a> /
-  <a href="https://drive.google.com/file/d/1QUKYqhB8019y5zn0C2swtmTixrP7prMM/view?usp=sharing", target="_blank">[dataset example]</a> /
-  <a href="https://www.youtube.com/watch?v=KGwDLg8Mn7I", target="_blank">[video]</a>
-  <!-- <a href="", target="_blank">[arXiv]</a> /
-  <a href="", target="_blank">[paper]</a> /
-  <a href="", target="_blank">[supplementary]</a> -->
+  <a href="https://forms.gle/HDvxQonR676mog3d6", target="_blank">[data]</a> /
+  <a href="https://vimeo.com/876025855", target="_blank">[video]</a>
 </h4>
 
 
@@ -47,7 +45,7 @@ This is the offical [Pytorch](https://pytorch.org/) implementation of our paper:
 
 - [x] Provide train & inference code for 3 tracks.
 - [x] Provide dataset pre-processing and visualization scripts.
-- [ ] Provide whole dataset when accepted.
+- [x] Provide whole dataset when accepted.
 
 # Installation
 
@@ -139,9 +137,12 @@ cd ..
 
 # Data
 
-1. Please check that there is more than 20G storage on your workstation. Download [ChimpACT dataset]() and unzip it to `data/ChimpACT_release/`. The content in `ChimpACT_release` contains the original dataset:
+1. Please check that there is more than 20G storage on your workstation. Download [ChimpACT dataset](https://forms.gle/HDvxQonR676mog3d6) and unzip it to `data/ChimpACT_release/`. The content in `ChimpACT_release` contains the original dataset:
     - `videos_full` includes 163 video clips in `.mp4` format.
     - `labels` includes 163 label `.json` file in COCO-style for each video clip.
+    - `action_list.txt` contains the action categories.
+
+    **Remind to make a `data` directory under the `ChimpACT` project first.**
 
 2. To run the three tracks, please process the data using the script. Please activate `chimp_track` env. first.
 
@@ -286,7 +287,15 @@ bash tools/dist_train.sh configs/detection/slowfast/slowfast_kinetics400-pretrai
 bash tools/dist_test.sh configs/detection/slowfast/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_chimp-rgb.py work_dirs/slowfast_kinetics400-pretrained-r50_8xb8-8x8x1-20e_chimp-rgb/epoch_20.pth 4
 ```
 
-
+# Citation
+```bibtex
+@inproceedings{ma2023chimpact,
+    title={ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors},
+    author={Ma, Xiaoxuan and Stephan P. Kaufhold and Su, Jiajun and Zhu, Wentao and Jack Terwilliger and Andres Meza and Zhu, Yixin and Federico Rossano and Wang, Yizhou},
+    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
+    year={2023}
+}
+```
 
 # Acknowledgement
 This repo is built on the excellent work [MMTracking](https://github.com/open-mmlab/mmtracking), [MMPose](https://github.com/open-mmlab/mmpose), and [MMAction2](https://github.com/open-mmlab/mmaction2). Thanks for these great projects.
