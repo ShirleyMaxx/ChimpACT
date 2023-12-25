@@ -138,11 +138,13 @@ cd ..
 # Data
 
 1. Please check that there is more than 20G storage on your workstation. Download [ChimpACT dataset](https://forms.gle/HDvxQonR676mog3d6) and unzip it to `data/ChimpACT_release/`. The content in `ChimpACT_release` contains the original dataset:
-    - `videos_full` includes 163 video clips in `.mp4` format.
-    - `labels` includes 163 label `.json` file in COCO-style for each video clip.
+    - `videos_full` includes 163 video clips in `.mp4` format,
+    - `labels` includes 163 label `.json` file in COCO-style for each video clip,
     - `action_list.txt` contains the action categories.
 
-    **Remind to make a `data` directory under the `ChimpACT` project first.**
+    :star: **Remind to make a `data` directory under the `ChimpACT` project first.**
+
+    :star: **Our dataset is distributed under the [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.en) license.**
 
 2. To run the three tracks, please process the data using the script. Please activate `chimp_track` env. first.
 
