@@ -291,11 +291,13 @@ bash tools/dist_test.sh configs/detection/slowfast/slowfast_kinetics400-pretrain
 
 # Citation
 ```bibtex
-@inproceedings{ma2023chimpact,
-    title={ChimpACT: A Longitudinal Dataset for Understanding Chimpanzee Behaviors},
-    author={Ma, Xiaoxuan and Stephan P. Kaufhold and Su, Jiajun and Zhu, Wentao and Jack Terwilliger and Andres Meza and Zhu, Yixin and Federico Rossano and Wang, Yizhou},
-    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-    year={2023}
+@article{ma2023chimpact,
+  title={Chimpact: A longitudinal dataset for understanding chimpanzee behaviors},
+  author={Ma, Xiaoxuan and Kaufhold, Stephan and Su, Jiajun and Zhu, Wentao and Terwilliger, Jack and Meza, Andres and Zhu, Yixin and Rossano, Federico and Wang, Yizhou},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  pages={27501--27531},
+  year={2023}
 }
 ```
 
