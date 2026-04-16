@@ -41,6 +41,14 @@ This is the offical [Pytorch](https://pytorch.org/) implementation of our paper:
 </h4>
 
 
+# News 🚩
+
+<a href="https://sites.google.com/view/alphachimp/home">AlphaChimp</a> is accepted by IJCV 2026.
+
+TL;DR: An end-to-end approach that simultaneously detects chimpanzee positions and estimates behavior categories from videos.
+
+Try it out on your own chimpanzee footage — the code and model weights are now available.
+
 # TODO :white_check_mark:
 
 - [x] Provide train & inference code for 3 tracks.
